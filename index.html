@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WAVE Radio — Pure Velocity</title>
+        <meta name="description" content="WAVE Radio — broadcasting the frequency of now. 24/7 electronic, house, techno from Toronto.">
+        <meta property="og:title" content="WAVE Radio — Pure Velocity">
+        <meta property="og:description" content="Broadcasting the frequency of now.">
+        <meta property="og:type" content="website">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <style>/* SPA section switcher — keeps player mounted across views */.spa-section { display: none; animation: spaFade .35s ease both; } .spa-section.active { display: block; } @keyframes spaFade{ from {  opacity: 0;  transform: translateY(8px); }  to {  opacity: 1;  transform: none; } } main { padding-bottom: 140px; } /* space for fixed player */</style>
+    </head>
+    <body>
+        <!-- ============== HEADER ============== -->
+        <header class="header">
+            <div class="header-inner">
+                <a href="#home" class="logo" data-nav="home"> <img src="assets/WAVE%20RADIO.png" style="max-width: 10ch;"> </a>
+                <nav class="nav">
+                    <a href="#home" data-nav="home" class="active">HOME</a>
+                    <span class="dot"></span>
+                    <a href="#about" data-nav="about">ABOUT</a>
+                    <span class="dot"></span>
+                    <a href="#contact" data-nav="contact">CONTACT</a>
+                </nav>
+                <div class="header-right">
+                    <div class="live-pill">
+                        <span class="pdot"></span>
+                        <span class="live-label">ON AIR</span>
+                    </div>
+                    <button id="menuBtn" class="menu-btn" aria-label="Toggle menu" aria-expanded="false"></button>
+                </div>
+            </div>
+            <nav id="mobileNav" class="mobile-nav">
+                <div class="mobile-nav-inner">
+                    <a href="#home" data-nav="home" class="active">HOME</a>
+                    <a href="#about" data-nav="about">ABOUT</a>
+                    <a href="#contact" data-nav="contact">CONTACT</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- ============== HOME ============== -->
+            <section id="home" class="spa-section active">
+                <div class="page">
+                    <div class="aurora">
+                        <div class="a1"></div>
+                        <div class="a2"></div>
+                    </div>
+                    <section class="hero">
+                        <div class="hero-inner">
+                            <h1 class="text-glow">PURE VELOCITY</h1>
+                            <p class="lead">broadcasting the frequency of now</p>
+                            <div class="genres">
+                                <span class="genre">ELECTRONIC</span>
+                                <span class="genre">HOUSE</span>
+                                <span class="genre">TECHNO</span>
+                            </div>
+                            <div class="disc-wrap">
+                                <div class="disc" id="discArt">
+                                    <img id="discArtImg" class="disc-art" alt="" hidden referrerpolicy="no-referrer" loading="lazy" decoding="async">
+                                    <div class="disc-fallback" id="discFallback">
+                                        <div class="w">W A V E&nbsp;&nbsp;R A D I O</div>
+                                        <div class="sub">PURE VELOCITY</div>
+                                    </div>
+                                    <div class="eq" id="discEq">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="now-playing" id="nowPlayingText" style="display:none"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-label">
+                            <span class="bar"></span>NEXT ON THE FREQUENCY<span class="bar"></span>
+                        </div>
+                        <div class="grid-3">
+                            <div class="glass sched-card">
+                                <div class="sched-time">17:00</div>
+                                <div class="sched-art">
+                                    <img src="assets/show-solar.jpg" alt="Solar Drift" loading="lazy">
+                                    <div class="eq-mini">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="sched-meta">
+                                    <div class="sched-title">Solar Drift</div>
+                                    <div class="sched-artist">Arcturus</div>
+                                    <div class="sched-tag">Original Mix</div>
+                                </div>
+                            </div>
+                            <div class="glass sched-card">
+                                <div class="sched-time">18:00</div>
+                                <div class="sched-art">
+                                    <img src="assets/show-eclipse.jpg" alt="Eclipse" loading="lazy">
+                                    <div class="eq-mini">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="sched-meta">
+                                    <div class="sched-title">Eclipse.</div>
+                                    <div class="sched-artist">Noir Catalyst</div>
+                                    <div class="sched-tag">Extended Mix</div>
+                                </div>
+                            </div>
+                            <div class="glass sched-card">
+                                <div class="sched-time">19:00</div>
+                                <div class="sched-art">
+                                    <img src="assets/show-voltage.jpg" alt="Voltage" loading="lazy">
+                                    <div class="eq-mini">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="sched-meta">
+                                    <div class="sched-title">Voltage</div>
+                                    <div class="sched-artist">Kira Stone</div>
+                                    <div class="sched-tag">Club Edit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- ============== ABOUT ============== -->
+            <section id="about" class="spa-section">
+                <div class="page about">
+                    <div class="about-grid">
+                        <div>
+                            <div class="kicker">A B O U T</div>
+                            <h1>Since 1994.<br>Still tuning<br>the sound.</h1>
+                            <p class="lead-p">
+            WAVE Radio is a one-person electronic music project broadcasting 24/7 from Toronto, Canada.
+            Underground at heart. Global in reach. Real music, no filler. </p>
+                            <div class="wave-svg">
+                                <svg viewBox="0 0 400 80" preserveAspectRatio="none" style="width:100%;height:100%">
+                                    <path d="M0,40 Q50,10 100,40 T200,40 T300,40 T400,40" stroke="#5fd4e8" stroke-width="2" fill="none" opacity=".6"/>
+                                    <path d="M0,40 Q50,70 100,40 T200,40 T300,40 T400,40" stroke="#ff3d8a" stroke-width="2" fill="none" opacity=".7"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="tl-item">
+                                <div class="tl-dot"></div>
+                                <div class="glass-accent tl-card">
+                                    <div class="tl-row">
+                                        <div class="tl-year">1994</div>
+                                        <div>
+                                            <div class="tl-title">It started with a cassette deck</div>
+                                            <div class="tl-body">WAVE began in a small bedroom in Toronto. Late nights, mixtapes, and a passion for underground sounds.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"></div>
+                                <div class="glass-accent tl-card">
+                                    <div class="tl-row">
+                                        <div class="tl-year">1998</div>
+                                        <div>
+                                            <div class="tl-title">First stream, first signal</div>
+                                            <div class="tl-body">Dial-up days. 56k connections. WAVE went online and never looked back.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"></div>
+                                <div class="glass-accent tl-card">
+                                    <div class="tl-row">
+                                        <div class="tl-year">2000s</div>
+                                        <div>
+                                            <div class="tl-title">Building the wave</div>
+                                            <div class="tl-body">Upgrades, servers, and a growing global audience. EDM culture evolved—and so did WAVE.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-dot"></div>
+                                <div class="glass-accent tl-card">
+                                    <div class="tl-row">
+                                        <div class="tl-year">NOW</div>
+                                        <div>
+                                            <div class="tl-title">Still independent. Always evolving.</div>
+                                            <div class="tl-body">New tech, same mission. 24/7 EDM, handpicked and broadcast with care.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="section-center">T H E&nbsp;&nbsp;S O U N D</div>
+                        <div class="grid-3">
+                            <div class="glass feature-card">
+                                <div class="feature-icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-title">Processed broadcast chain</div>
+                                <div class="feature-body">Professional audio processing, limiting, and dynamic control for a consistent listening experience.</div>
+                            </div>
+                            <div class="glass feature-card">
+                                <div class="feature-icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <line x1="12" y1="20" x2="12" y2="10"/>
+                                        <line x1="18" y1="20" x2="18" y2="4"/>
+                                        <line x1="6" y1="20" x2="6" y2="16"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-title">320 kbps MP3</div>
+                                <div class="feature-body">High quality 320 kbps MP3 stream delivered 24/7 for the best balance of sound and bandwidth.</div>
+                            </div>
+                            <div class="glass feature-card">
+                                <div class="feature-icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-title">4 synced servers worldwide</div>
+                                <div class="feature-body">Our stream is hosted on 4 servers across the globe to keep you connected, always.</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="glass person">
+                        <div class="person-grid">
+                            <div class="person-avatar">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="35" r="14" fill="#1a1126"/>
+                                    <path d="M20,100 Q20,55 50,55 Q80,55 80,100 Z" fill="#1a1126"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:20px;font-weight:600">The person behind it</div>
+                                <div class="location-chip">
+                                    <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Toronto, Canada
+                                </div>
+                                <p style="margin-top:16px;font-size:14px;line-height:1.6;color:var(--muted)">
+              WAVE Radio is run by a single producer, engineer, and music lover from Toronto. Every track you hear is handpicked.
+              Every detail is handled with care—from the first beat to the final master. </p>
+                                <p style="margin-top:12px;font-size:14px;color:rgba(247,245,251,.8)">
+              Thanks for listening.<br><span style="color:var(--muted)">— WAVE</span> </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cta-row">
+                        <a href="#home" data-nav="home" class="btn btn-primary"> <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+          Listen now </a>
+                        <a href="#contact" data-nav="contact" class="btn btn-outline"> <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+          Contact </a>
+                    </section>
+                </div>
+            </section>
+            <!-- ============== CONTACT ============== -->
+            <section id="contact" class="spa-section">
+                <div class="page" style="max-width:64rem">
+                    <div class="contact-head">
+                        <h1>Let's talk.</h1>
+                        <p>Requests, shout-outs, demos, or just say hi from wherever you're tuning in.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <form id="contactForm" class="glass-primary form" novalidate>
+                            <div class="title">Send a message</div>
+                            <input name="name" placeholder="Name" required>
+                            <input name="subject" placeholder="Subject" required>
+                            <textarea name="message" placeholder="Message" required rows="5"></textarea>
+                            <div class="submit-row">
+                                <button type="submit">
+                                    <span class="label">Send message</span>
+                                    <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                        <line x1="22" y1="2" x2="11" y2="13"/>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="contact-side">
+                            <div class="glass-accent contact-card">
+                                <div class="h">Email</div>
+                                <div class="row">
+                                    <div class="contact-icon">
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:hello@waveradio.example">hello@waveradio.example</a>
+                                        <div class="sub">Replies usually within a day or two.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glass-accent contact-card">
+                                <div class="h">Phone</div>
+                                <div class="row">
+                                    <div class="contact-icon">
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="tel:+18086006926">+1 (808) 600-6926</a>
+                                        <div class="sub">Toronto, Canada · EST</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ============== PERSISTENT PLAYER BAR ============== -->
+        <div class="player">
+            <div class="player-inner">
+                <div class="player-meta">
+                    <div class="player-art" id="playerArt">
+                        <div class="ph">wave</div>
+                        <img id="playerArtImg" alt="" hidden referrerpolicy="no-referrer" loading="lazy" decoding="async">
+                    </div>
+                    <div class="player-text">
+                        <div class="player-title">Wave Radio</div>
+                        <div class="player-artist">Live Stream</div>
+                    </div>
+                </div>
+                <button id="playBtn" class="play-btn" aria-label="Play"></button>
+                <div class="player-vol">
+                    <span id="volIcon"></span>
+                    <input id="volRange" type="range" min="0" max="100" value="80" aria-label="Volume">
+                </div>
+                <div style="position:relative">
+                    <button id="serverBtn" class="server-btn" aria-label="Choose server"></button>
+                    <div id="serverMenu" class="server-menu"></div>
+                </div>
+            </div>
+            <div id="mixedWarn" class="mixed-warning" style="display:none">
+                UK servers use HTTP and can't play directly on a secure page. The stream opened in a new tab — or use a Zeno server.
+                <span style="opacity:.7">(<span class="srv-label"></span>)</span>
+            </div>
+        </div>
+        <script>
+  // Build eq bars for disc
+  (function(){
+    const eq = document.getElementById("discEq");
+    if (!eq) return;
+    let h = "";
+    for (let i=0;i<32;i++){
+      const delay = (i%8)*0.08;
+      const dur = 0.6 + (i%5)*0.15;
+      h += `<span style="animation-delay:${delay}s;animation-duration:${dur}s"></span>`;
+    }
+    eq.innerHTML = h;
+  })();
+
+  // ===== SPA section switcher (no reload — player keeps playing) =====
+  (function(){
+    const sections = ['home','about','contact'];
+    const titles = {
+      home:    'WAVE Radio — Pure Velocity',
+      about:   'About — WAVE Radio',
+      contact: 'Contact — WAVE Radio'
+    };
+
+    function show(name, push){
+      if (!sections.includes(name)) name = 'home';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle('active', id === name);
+      });
+      document.querySelectorAll('[data-nav]').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-nav') === name);
+      });
+      document.title = titles[name];
+      if (push) history.pushState({nav:name}, '', '#' + name);
+      // close mobile menu if open
+      const mn = document.getElementById('mobileNav');
+      const mb = document.getElementById('menuBtn');
+      if (mn) mn.classList.remove('open');
+      if (mb) mb.setAttribute('aria-expanded','false');
+      // smooth scroll to top of content
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+
+    document.addEventListener('click', function(e){
+      const a = e.target.closest('[data-nav]');
+      if (!a) return;
+      e.preventDefault();
+      show(a.getAttribute('data-nav'), true);
+    });
+
+    window.addEventListener('popstate', function(){
+      const name = (location.hash || '#home').slice(1);
+      show(name, false);
+    });
+
+    // initial route from hash
+    const initial = (location.hash || '#home').slice(1);
+    show(initial, false);
+  })();
+</script>
+        <script src="script.js"></script>
+    </body>
+</html>
